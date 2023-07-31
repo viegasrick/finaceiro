@@ -1,0 +1,197 @@
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #000000;
+  }
+  
+  /* Estilo do fundo do conteúdo geral da página */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff8800;
+    z-index: -1;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  label,
+  input{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #000000;
+    
+  }
+  
+  /* Estilos do formulário */
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #ebebeb;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container label {
+    margin-right: 10px;
+  }
+  
+  .form-container input,
+  .form-container select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-container select {
+    width: 150px;
+  }
+  
+  .form-container button {
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 20px;
+    border: none;
+    margin-right: 15px;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container button:hover {
+    background-color: #acacac;
+  }
+  
+  /* Estilos da tabela de transações */
+  .transactions-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transactions-table th,
+  .transactions-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .transactions-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .transactions-table td.receita {
+    color: #0a960a;
+    font-weight: bold;
+  }
+  
+  .transactions-table td.despesa {
+    color: #c12727;
+    font-weight: bold;
+  }
+  
+  /* Estilos do botão de editar e excluir */
+  .edit-button,
+  .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .edit-button:hover,
+  .delete-button:hover {
+    background-color: #b02121;
+  }
+  
+  /* Estilos da mensagem de "Nenhuma transação cadastrada" */
+  .no-transactions-message {
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  /* Estilos do resumo financeiro */
+  .summary-container {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e2e2e2;
+    color: #000000;
+    border-radius: 5px;
+  }
+  
+  .summary-container h2 {
+    margin-top: 0;
+  }
+  
+  .summary-container p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  /* Estilo do saldo */
+  #saldo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Estilos responsivos para larguras de tela menores que 600px */
+  @media screen and (max-width: 600px) {
+    .form-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .form-container label,
+    .form-container input,
+    .form-container select {
+      margin-bottom: 5px;
+    }
+  
+    .form-container button {
+      width: 100%;
+    }
+  
+    .transactions-table th,
+    .transactions-table td {
+      padding: 8px;
+    }
+  }
+  
+  /* Estilos responsivos para larguras de tela menores que 400px */
+  @media screen and (max-width: 400px) {
+    h1 {
+      font-size: 20px;
+    }
+  
+    .transactions-table th,
+    .transactions-table td {
+      font-size: 12px;
+    }
+  
+    .summary-container p {
+      font-size: 16px;
+    }
+  }
+  
